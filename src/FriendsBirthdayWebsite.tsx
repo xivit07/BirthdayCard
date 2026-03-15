@@ -67,7 +67,7 @@ const memoryPhotos: MemoryItem[] = [
   about: "Watching her bridge the gap between physical art and prompt engineering was a masterclass. She dialed in the details so perfectly that GPT delivered a near-flawless replica of her nail art.",
   },
   {
-    src: "/pictures/ChatGPT Image Mar 15, 2026 at 11_37_39 PM.png",
+    src: "public/pictures/ChatGPT Image Mar 15, 2026 at 11_37_39 PM.png",
     title: "A Tale of Two Brews",
     caption: "The ultimate caffeine crossroads: earthy greens or classic dark roast?",
     year: "2026",
