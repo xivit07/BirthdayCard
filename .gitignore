@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+
+# production
+/dist
+
+# build metadata
+*.tsbuildinfo
+
+# Vite
+/vite.config.d.ts
+/vite.config.js
+
+# local env files
+.env
+.env.*
+
+# macOS
+.DS_Store
