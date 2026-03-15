@@ -309,42 +309,14 @@ export default function FriendsBirthdayWebsite() {
   const [opened, setOpened] = useState(false);
   const [activePage, setActivePage] = useState<PageId>("home");
   const [selectedImage, setSelectedImage] = useState<MemoryItem | null>(null);
-  const [memoryStart, setMemoryStart] = useState(0);
   const [previewVideoIndex, setPreviewVideoIndex] = useState<number | null>(null);
   const [typedIntro, setTypedIntro] = useState("");
   const [flippedTraits, setFlippedTraits] = useState<number[]>([]);
   const [candlesOut, setCandlesOut] = useState(false);
 
-  const touchStartX = useRef<number | null>(null);
   const memoriesRef = useRef<HTMLDivElement | null>(null);
 
   const allMemories = memoryPhotos;
-  const visibleMemoryCount = 4;
-  const maxMemoryStart = Math.max(allMemories.length - visibleMemoryCount, 0);
-
-  const goPrevMemories = () => {
-    setMemoryStart((prev) => Math.max(prev - 1, 0));
-  };
-
-  const goNextMemories = () => {
-    setMemoryStart((prev) => Math.min(prev + 1, maxMemoryStart));
-  };
-
-  useEffect(() => {
-    if (activePage !== "memories") return;
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "ArrowLeft") {
-        setMemoryStart((prev) => Math.max(prev - 1, 0));
-      }
-      if (event.key === "ArrowRight") {
-        setMemoryStart((prev) => Math.min(prev + 1, maxMemoryStart));
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activePage, maxMemoryStart]);
 
   const introText =
     "Dearest reader, today we honor a heart so lovely, a spirit so bright, and a friendship so precious it deserves its very own society column.";
@@ -440,64 +412,24 @@ export default function FriendsBirthdayWebsite() {
           {activePage === "memories" && (
             <motion.div key="memories" {...pageAnimation}>
               <div className="space-y-6">
-                <div className="flex items-end justify-between gap-4">
-                  <div>
-                    <h2 className="font-serif text-2xl text-[#4d3426] md:text-3xl">
-                      Memory Collection
-                    </h2>
-                    <p className="mt-2 text-sm text-[#6f5645]">
-                      Browse the memory posters. Open one to see the full description.
-                    </p>
-                  </div>
-
-                  <div className="flex gap-2">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={goPrevMemories}
-                      disabled={memoryStart === 0}
-                      className="border-[#d8ccbd] bg-[#fff9f2] text-[#4d3426] disabled:opacity-40"
-                    >
-                      ←
-                    </Button>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={goNextMemories}
-                      disabled={memoryStart === maxMemoryStart}
-                      className="border-[#d8ccbd] bg-[#fff9f2] text-[#4d3426] disabled:opacity-40"
-                    >
-                      →
-                    </Button>
-                  </div>
+                <div>
+                  <h2 className="font-serif text-2xl text-[#4d3426] md:text-3xl">
+                    Memory Collection
+                  </h2>
+                  <p className="mt-2 text-sm text-[#6f5645]">
+                    Browse the memory posters. Open one to see the full description.
+                  </p>
                 </div>
 
-                <div
-                  className="relative overflow-hidden rounded-[28px] bg-[#fbf6ef]/90 p-4 shadow-sm ring-1 ring-[#eadfce] touch-pan-y"
-                  onTouchStart={(e) => {
-                    touchStartX.current = e.touches[0]?.clientX ?? null;
-                  }}
-                  onTouchEnd={(e) => {
-                    if (touchStartX.current === null) return;
-                    const endX = e.changedTouches[0]?.clientX ?? touchStartX.current;
-                    const delta = endX - touchStartX.current;
-                    if (delta > 40) goPrevMemories();
-                    if (delta < -40) goNextMemories();
-                    touchStartX.current = null;
-                  }}
-                >
-                  <motion.div
-                    animate={{ x: `-${memoryStart * 25}%` }}
-                    transition={{ type: "spring", stiffness: 260, damping: 30 }}
-                    className="flex gap-4"
-                  >
+                <div className="relative overflow-x-auto rounded-[28px] bg-[#fbf6ef]/90 p-4 shadow-sm ring-1 ring-[#eadfce] snap-x snap-mandatory" style={{ scrollbarWidth: 'none' }}>
+                  <div className="flex gap-4 snap-x snap-mandatory">
                     {allMemories.map((photo, i) => (
                       <motion.button
                         key={photo.src}
                         type="button"
                         whileHover={{ scale: 1.04, y: -4 }}
                         whileTap={{ scale: 0.98 }}
-                        className="group relative min-w-[78%] overflow-hidden rounded-[24px] text-left shadow-lg sm:min-w-[48%] lg:min-w-[calc(25%-12px)]"
+                        className="group relative flex-shrink-0 w-[78vw] overflow-hidden rounded-[24px] text-left shadow-lg sm:w-[48vw] lg:w-[25vw] snap-center"
                         onMouseEnter={() => {
                           if (photo.mediaType === "video") setPreviewVideoIndex(i);
                         }}
@@ -554,20 +486,6 @@ export default function FriendsBirthdayWebsite() {
                           </div>
                         </div>
                       </motion.button>
-                    ))}
-                  </motion.div>
-
-                  <div className="flex items-center justify-center gap-2 pt-2">
-                    {Array.from({ length: maxMemoryStart + 1 }, (_, index) => (
-                      <button
-                        key={index}
-                        type="button"
-                        aria-label={`Go to memory group ${index + 1}`}
-                        onClick={() => setMemoryStart(index)}
-                        className={`h-2.5 rounded-full transition-all ${
-                          memoryStart === index ? "w-8 bg-[#8b6b58]" : "w-2.5 bg-[#d8c7b5] hover:bg-[#b89a6b]"
-                        }`}
-                      />
                     ))}
                   </div>
                 </div>
