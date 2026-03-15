@@ -436,7 +436,7 @@ export default function FriendsBirthdayWebsite() {
                         type="button"
                         whileHover={{ scale: 1.04, y: -4 }}
                         whileTap={{ scale: 0.98 }}
-                        className="group relative flex-shrink-0 w-[72vw] overflow-hidden rounded-[24px] text-left shadow-lg sm:w-[48vw] lg:w-[25vw] snap-center"
+                        className="group relative flex-shrink-0 w-[80vw] overflow-hidden rounded-[24px] text-left shadow-lg sm:w-[48vw] lg:w-[25vw] snap-center"
                         onMouseEnter={() => {
                           if (photo.mediaType === "video") setPreviewVideoIndex(i);
                         }}
@@ -451,7 +451,7 @@ export default function FriendsBirthdayWebsite() {
                         }}
                         onClick={() => setSelectedImage(photo)}
                       >
-                        <div className="relative h-[240px] w-full overflow-hidden rounded-[24px] bg-[#e9dfd2] sm:h-[360px]">
+                        <div className="relative h-[40vh] w-full overflow-hidden rounded-[24px] bg-[#e9dfd2] sm:h-[360px]">
                           {photo.mediaType === "video" ? (
                             <>
                               {previewVideoIndex === i ? (
@@ -485,9 +485,9 @@ export default function FriendsBirthdayWebsite() {
                             />
                           )}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                          <div className="absolute inset-x-0 bottom-0 z-20 p-5 text-white">
-                            <p className="font-serif text-2xl tracking-wide">{photo.title}</p>
-                            <p className="mt-1 text-sm leading-6 opacity-90">{photo.caption}</p>
+                          <div className="absolute inset-x-0 bottom-0 z-20 p-3 text-white sm:p-5">
+                            <p className="font-serif text-lg tracking-wide sm:text-2xl">{photo.title}</p>
+                            <p className="mt-1 text-xs leading-5 opacity-90 sm:text-sm sm:leading-6">{photo.caption}</p>
                             <p className="mt-2 text-xs uppercase tracking-[0.24em] text-white/75">
                               {photo.mediaType === "video" ? "Video Memory" : "Photo Memory"}
                             </p>
