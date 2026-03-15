@@ -436,7 +436,7 @@ export default function FriendsBirthdayWebsite() {
                         type="button"
                         whileHover={{ scale: 1.04, y: -4 }}
                         whileTap={{ scale: 0.98 }}
-                        className="group relative flex-shrink-0 w-[78vw] overflow-hidden rounded-[24px] text-left shadow-lg sm:w-[48vw] lg:w-[25vw] snap-center"
+                        className="group relative flex-shrink-0 w-[72vw] overflow-hidden rounded-[24px] text-left shadow-lg sm:w-[48vw] lg:w-[25vw] snap-center"
                         onMouseEnter={() => {
                           if (photo.mediaType === "video") setPreviewVideoIndex(i);
                         }}
@@ -451,7 +451,7 @@ export default function FriendsBirthdayWebsite() {
                         }}
                         onClick={() => setSelectedImage(photo)}
                       >
-                        <div className="relative h-[360px] w-full overflow-hidden rounded-[24px] bg-[#e9dfd2]">
+                        <div className="relative h-[240px] w-full overflow-hidden rounded-[24px] bg-[#e9dfd2] sm:h-[360px]">
                           {photo.mediaType === "video" ? (
                             <>
                               {previewVideoIndex === i ? (
