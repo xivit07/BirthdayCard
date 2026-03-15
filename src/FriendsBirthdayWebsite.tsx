@@ -293,6 +293,13 @@ function EnvelopeIntro({ onOpen }: { onOpen: () => void }) {
                 }}
                 className="absolute left-0 top-0 z-[50] h-[50%] w-full bg-gradient-to-b from-[#f7f2eb] to-[#efe8de] shadow-md"
               />
+
+              {/* Wax Seal */}
+              <div className="absolute left-1/2 top-[25%] z-[60] -translate-x-1/2 -translate-y-1/2">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 shadow-lg ring-2 ring-red-800 sm:h-16 sm:w-16">
+                  <span className="text-lg text-white sm:text-xl">🕯️</span>
+                </div>
+              </div>
             </div>
           </div>
         </button>
@@ -359,7 +366,7 @@ export default function FriendsBirthdayWebsite() {
     <div className="min-h-screen bg-[#f8f2ea] text-[#4d3426]">
       <Petals />
 
-      <div ref={memoriesRef} className="mx-auto max-w-6xl px-6 py-10 max-h-screen overflow-y-auto md:overflow-visible">
+      <div ref={memoriesRef} className="mx-auto max-w-6xl px-6 py-10">
         <header className="mb-10 text-center">
           <p className="text-sm uppercase tracking-[0.3em] text-[#8b6b58]">
             Lady Whistledown&apos;s Society Papers
