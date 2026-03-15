@@ -205,7 +205,7 @@ function EnvelopeIntro({ onOpen }: { onOpen: () => void }) {
   }));
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-[#fdfbf7] to-[#f3ede4] px-4 py-10">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-[#fdfbf7] to-[#f3ede4] px-4 py-10 overflow-y-auto">
       <div className="w-full max-w-3xl text-center">
         <p className="text-sm uppercase tracking-[0.35em] text-[#8b6b58]">
           Society Papers
@@ -359,7 +359,7 @@ export default function FriendsBirthdayWebsite() {
     <div className="min-h-screen bg-[#f8f2ea] text-[#4d3426]">
       <Petals />
 
-      <div ref={memoriesRef} className="mx-auto max-w-6xl px-6 py-10">
+      <div ref={memoriesRef} className="mx-auto max-w-6xl px-6 py-10 max-h-screen overflow-y-auto md:overflow-visible">
         <header className="mb-10 text-center">
           <p className="text-sm uppercase tracking-[0.3em] text-[#8b6b58]">
             Lady Whistledown&apos;s Society Papers
