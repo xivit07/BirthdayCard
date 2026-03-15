@@ -38,7 +38,7 @@ const pages: Array<{
 
 const memoryPhotos: MemoryItem[] = [
   {
-    src: "public/pictures/WhatsApp Image 2026-03-15 at 12.32.56 AM.jpeg",
+    src: "/BirthdayCard/pictures/WhatsApp Image 2026-03-15 at 12.32.56 AM.jpeg",
     title: "The Bha",
     caption: "Just a mentor-mentee duo taking on the world, one bear hug at a time.",
     year: "2025",
@@ -47,18 +47,18 @@ const memoryPhotos: MemoryItem[] = [
     about: "This photo captures a rare quiet moment in the middle of the usual chaos. It’s not often you find a junior who challenges you, keeps things running, and still manages to be a source of genuine support. Definitely a core memory for the books.",
   },
   {
-    src: "public/videos/WhatsApp Video 2026-03-15 at 12.01.30 PM.mp4",
+    src: "/BirthdayCard/videos/WhatsApp Video 2026-03-15 at 12.01.30 PM.mp4",
     title: "First Trip to The United States",
     caption: "The beginning of a long-awaited chapter: finally heading to the States.",
     year: "2025",
     vibe: "Exciting New Chapter",
     mediaType: "video",
     poster:
-      "public/pictures/WhatsApp Image 2026-03-15 at 12.07.44 PM.jpeg",
+      "/BirthdayCard/pictures/WhatsApp Image 2026-03-15 at 12.07.44 PM.jpeg",
     about: "That specific brand of airport excitement where the nerves and the joy are both at 100%. Seeing her this hyped for her first US trip was a highlight of the year.",
   },
   {
-    src: "public/pictures/WhatsApp Image 2026-03-15 at 12.26.40 PM.jpeg",
+    src: "/BirthdayCard/pictures/WhatsApp Image 2026-03-15 at 12.26.40 PM.jpeg",
   title: "The Prompt Architect",
   caption: "Engineering the perfect aesthetic, from her nails to the model's output.",
   year: "2025",
@@ -67,7 +67,7 @@ const memoryPhotos: MemoryItem[] = [
   about: "Watching her bridge the gap between physical art and prompt engineering was a masterclass. She dialed in the details so perfectly that GPT delivered a near-flawless replica of her nail art.",
   },
   {
-    src: "public/pictures/ChatGPT Image Mar 15, 2026 at 11_37_39 PM.png",
+    src: "/BirthdayCard/pictures/ChatGPT Image Mar 15, 2026 at 11_37_39 PM.png",
     title: "A Tale of Two Brews",
     caption: "The ultimate caffeine crossroads: earthy greens or classic dark roast?",
     year: "2026",
@@ -76,7 +76,7 @@ const memoryPhotos: MemoryItem[] = [
     about: "It's not just a preference; it’s a full-on obsession with both. Whether she’s holding the aesthetically perfect matcha in its rippled glass or the quick comfort of an iced latte on the go, the debate for ‘best brew’ is a constant feature in her life. Why choose when you can master both?",
   },
   {
-    src: "public/pictures/WhatsApp Image 2026-03-15 at 6.37.33 PM.jpeg",
+    src: "/BirthdayCard/pictures/WhatsApp Image 2026-03-15 at 6.37.33 PM.jpeg",
     title: "Videsi Heart, Desi Soul",
     caption: "Finding the perfect balance between everywhere she’s been and everywhere she’s from.Finding the perfect balance between everywhere she’s been and everywhere she’s from.",
     year: "2025",
@@ -85,7 +85,7 @@ const memoryPhotos: MemoryItem[] = [
     about: "There’s a unique grace in how she moves between her 'videsi' adventures and her 'desi' spirit. It’s in the way she speaks, the way she leads, and the way she stays connected to home no matter how far she travels. She’s the perfect blend of a global outlook and a local heart.",
   },
   {
-    src: "public/pictures/ChatGPT Image Mar 15, 2026 at 11_57_41 PM.png",
+    src: "/BirthdayCard/pictures/ChatGPT Image Mar 15, 2026 at 11_57_41 PM.png",
     title: "A Constant Evolution",
     caption: "From playing dress-up to owning the room—the mischief remains the same.",
     year: "2025",
@@ -94,14 +94,14 @@ const memoryPhotos: MemoryItem[] = [
     about: "A visual proof that some things never change. Whether she’s rocking a makeshift dupatta as a kid or exploring the world today, that specific 'I’m up to something' smile is a constant. Posting this is probably a death wish, but the parallel was too good to pass up.",
   },
   {
-    src: "public/videos/birthday-memory.mp4",
+    src: "/BirthdayCard/videos/birthday-memory.mp4",
     title: "While I play the bongo",
     caption: "The real Director behind the scenes—I’m just here for the rhythm.",
     year: "2025",
     vibe: "Special Feature",
     mediaType: "video",
     poster:
-      "public/pictures/WhatsApp Image 2026-03-15 at 12.19.12 AM.jpeg",
+      "/BirthdayCard/pictures/WhatsApp Image 2026-03-15 at 12.19.12 AM.jpeg",
     about:
       "A rare look at the workplace hierarchy in its natural state. Even while playing the bongos, it’s clear who’s actually calling the shots. A tribute to the junior who manages the mentor better than anyone else.",
   },
