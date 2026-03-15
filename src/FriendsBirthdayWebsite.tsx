@@ -621,7 +621,7 @@ export default function FriendsBirthdayWebsite() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.96, y: 12 }}
               transition={{ duration: 0.25 }}
-              className="grid w-full max-w-6xl overflow-hidden rounded-[28px] bg-[#1a120e] shadow-2xl md:grid-cols-[1.1fr_0.9fr] md:max-h-[90vh]"
+              className="grid w-full max-w-6xl overflow-y-auto rounded-[28px] bg-[#1a120e] shadow-2xl md:grid-cols-[1.1fr_0.9fr] md:max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative min-h-[320px] bg-[#0f0b09]">
@@ -640,7 +640,7 @@ export default function FriendsBirthdayWebsite() {
                 </button>
               </div>
 
-              <div className="flex flex-col overflow-y-auto bg-[#f7efe4] p-6 text-[#4d3426] md:p-8 md:max-h-[90vh]">
+              <div className="flex flex-col bg-[#f7efe4] p-6 text-[#4d3426] md:p-8">
                 <p className="text-xs uppercase tracking-[0.32em] text-[#8b6b58]">
                   {selectedImage.mediaType === "video" ? "Memory Feature • Video" : "Memory Feature • Photo"}
                 </p>
