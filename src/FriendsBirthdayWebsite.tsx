@@ -487,6 +487,7 @@ export default function FriendsBirthdayWebsite() {
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                           <div className="absolute inset-x-0 bottom-0 z-20 p-5 text-white">
                             <p className="font-serif text-2xl tracking-wide">{photo.title}</p>
+                            <p className="mt-1 text-sm leading-6 opacity-90">{photo.caption}</p>
                             <p className="mt-2 text-xs uppercase tracking-[0.24em] text-white/75">
                               {photo.mediaType === "video" ? "Video Memory" : "Photo Memory"}
                             </p>
@@ -628,7 +629,7 @@ export default function FriendsBirthdayWebsite() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.96, y: 12 }}
               transition={{ duration: 0.25 }}
-              className="grid w-full max-w-6xl overflow-y-auto rounded-[28px] bg-[#1a120e] shadow-2xl md:grid-cols-[1.1fr_0.9fr] md:max-h-[90vh]"
+              className="grid w-full max-w-6xl overflow-y-auto rounded-[28px] bg-[#1a120e] shadow-2xl max-h-[90vh] md:grid-cols-[1.1fr_0.9fr]"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative min-h-[320px] bg-[#0f0b09]">
